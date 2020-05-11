@@ -1,0 +1,74 @@
+body {
+  background-color: #ecf0f1;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  color: #34495e;
+}
+
+span {
+  position: relative;
+  top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ecf0f1;
+}
+
+label {
+  margin: auto;
+  font-family: sans-serif;
+  background-color: #34495e;
+  display: block;
+  padding: 2em;
+  margin-bottom: 1em;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  cursor: pointer;
+  width: 40%;
+}
+
+@supports ( (-webkit-appearance: none) or (-moz-appearance: none) ) {
+  .switch {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    width: 3.5em;
+    height: 1.6em;
+    border-radius: 2em;
+    background-color: darkred;
+    outline: none;
+    transition: background-color .2s linear;
+    cursor: pointer;
+    font-size: 30px;
+  }
+
+  .switch::after {
+    content: "";
+    background-color: #fff;
+    display: block;
+    position: relative;
+    top: .15em;
+    left: .15em;
+    width: 1.15em;
+    height: 1.15em;
+    border: .1em solid grey;
+    border-radius: 2em;
+    transition: left .2s ease-in-out;
+  }
+
+  .switch:checked {
+    background-color: darkgreen;
+  }
+
+  .switch:checked::after {
+    left: 2em;
+  }
+
+  .disabled .switch {
+    background-color: darkgrey;
+  }
+
+}
